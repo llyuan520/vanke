@@ -1,105 +1,114 @@
-English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md)
+<h1 align="center">vanke</h1>
 
-<h1 align="center">Ant Design Pro</h1>
+主要使用：
 
-<div align="center">
+- [umijs](https://umijs.org/zh/) --- 手脚架
+- [ant-design-pro-cli](https://github.com/ant-design/ant-design-pro-cli) --- 构建工具
+- [docz](https://github.com/pedronauck/docz) --- 组件文档库
+- [ant-design-pro](https://github.com/ant-design/ant-design-pro) --- 组件库
+- [ant design](https://ant.design) --- 组件库
+- [@storybook/react](https://github.com/storybooks/storybook) --- UI测试组件库
+- [cross-env](https://github.com/kentcdodds/cross-env) --- 跨平台设置环境变量
 
-An out-of-box UI solution for enterprise applications as a React boilerplate.
-
-[![CircleCI Status](https://circleci.com/gh/ant-design/ant-design-pro.svg?style=svg)](https://circleci.com/gh/ant-design/ant-design-pro/)
-[![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://ci.appveyor.com/project/afc163/ant-design-pro/branch/master)
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro)
-[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro?type=dev)
-[![Gitter](https://badges.gitter.im/ant-design/ant-design-pro.svg)](https://gitter.im/ant-design/ant-design-pro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-![](https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png)
-
-</div>
-
-- Preview: http://preview.pro.ant.design
-- Home Page: http://pro.ant.design
-- Documentation: http://pro.ant.design/docs/getting-started
-- ChangeLog: http://pro.ant.design/docs/changelog
-- FAQ: http://pro.ant.design/docs/faq
-- Mirror Site in China: http://ant-design-pro.gitee.io
-
-## 2.0 Released Now! 🎉🎉🎉
-[Announcing Ant Design Pro 2.0.0](https://medium.com/ant-design/beautiful-and-powerful-ant-design-pro-2-0-release-51358da5af95)
-
-## Translation Recruitment :loudspeaker:
-
-We need your help: https://github.com/ant-design/ant-design-pro/issues/120
-
-## Features
-
-- :gem: **Neat Design**: Follow [Ant Design specification](http://ant.design/)
-- :triangular_ruler: **Common Templates**: Typical templates for enterprise applications
-- :rocket: **State of The Art Development**: Newest development stack of React/umi/dva/antd
-- :iphone: **Responsive**: Designed for variable screen sizes
-- :art: **Theming**: Customizable theme with simple config
-- :globe_with_meridians: **International**: Built-in i18n solution
-- :gear: **Best Practices**: Solid workflow to make your code healthy
-- :1234: **Mock development**: Easy to use mock development solution
-- :white_check_mark: **UI Test**: Fly safely with unit and e2e tests
-
-## Templates
-
-```
-- Dashboard
-  - Analytic
-  - Monitor
-  - Workspace
-- Form
-  - Basic Form
-  - Step Form
-  - Advanced From
-- List
-  - Standard Table
-  - Standard List
-  - Card List
-  - Search List (Project/Applications/Article)
-- Profile
-  - Simple Profile
-  - Advanced Profile
-- Account
-  - Account Center
-  - Account Settings
-- Result
-  - Success
-  - Failed
-- Exception
-  - 403
-  - 404
-  - 500
-- User
-  - Login
-  - Register
-  - Register Result
-```
-
-## Usage
+## 导航
+- [docz](#docz)
+## docz
 
 ```bash
-$ git clone https://github.com/ant-design/ant-design-pro.git --depth=1
-$ cd ant-design-pro
-$ npm install
-$ npm start         # visit http://localhost:8000
+$ yarn add docz --dev
 ```
 
-More instructions at [documentation](http://pro.ant.design/docs/getting-started).
+```markdown
+最好在package.json里面配置启动项的别名怕跟其它的有冲突（可选）
+{
+  "scripts": {
+      "docz:dev": "docz dev",
+      "docz:build": "docz build"
+    }
+}
+```
 
-## Browsers support
+然后在项目内的任何位置创建一些以`.mdx`为后缀的文件:
 
-Modern browsers and IE11.
+```markdown
+---
+name: Button
+---
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------- | --------- | --------- | --------- | --------- |
-| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
+import { Playground, PropsTable } from 'docz'
+import Button from './'
 
-## Contributing
+# Button
 
-Any type of contribution is welcome, here are some examples of how you may contribute to this project:
+<PropsTable of={Button} />
 
-- Use Ant Design Pro in your daily work.
-- Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
-- Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.
+## Basic usage
+
+<Playground>
+  <Button>Click me</Button>
+  <Button kind="secondary">Click me</Button>
+</Playground>
+```
+
+启动服务:
+
+```bash
+$ yarn docz dev
+```
+
+- [Commitizen](#Commitizen)
+## Commitizen
+> 使用目的:统一commit格式，增加可阅读性，自动生成版本的 changelog
+
+```sh
+$ npm install -g commitizen
+$ npm install -g conventional-changelog --``不包含命令行工具
+$ npm install -g conventional-changelog-cli  --``含命令行工具
+```
+
+cd vtax
+
+```sh
+$ commitizen init cz-conventional-changelog --save --save-exact
+```
+
+使用 ```git cz``` 命令代替 ```git commit```
+
+**常用选项**
+
+- feat: 新功能
+- fix: bug修复
+- docs: 仅修改文档
+- style: 不影响代码的修改 ( 空格、格式化、缺少分号等 )
+- refactor: 代码重构
+- perf: 修改代码提升性能
+- test: 添加或者修改测试代码
+
+**scope name 说明**
+
+- 如果是某个模块的修改则输入该模块具体名称，通用组件的修改则输入 ```通用组件-ComonentName``` 的形式；
+
+
+**short description**
+
+- 此次变更的简单标题，尽量简短描述
+
+
+**longer description**
+
+- 此次变更的详细描述，可以具体描述
+
+
+**affect any open issues**
+
+- 变更影响到某个已知的问题的话请选上,按照提示填写对应禅道编号的bug
+
+## workflow
+1. Make changes
+2. Commit those changes
+3. Make sure Travis turns green
+4. Bump version in package.json
+5. conventionalChangelog
+6. Commit package.json and CHANGELOG.md files
+7. Tag
+8. Push
