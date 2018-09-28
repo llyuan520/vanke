@@ -7,7 +7,9 @@
 - [docz](https://github.com/pedronauck/docz) --- 组件文档库
 - [ant-design-pro](https://github.com/ant-design/ant-design-pro) --- 组件库
 - [ant design](https://ant.design) --- 组件库
-- [@storybook/react](https://github.com/storybooks/storybook) --- UI测试组件库
+- [jest](https://github.com/facebook/jest) --- UI测试组件库
+- [Enzyme](https://github.com/airbnb/enzyme/) --- UI测试组件库
+- [Commitizen](https://github.com/commitizen) --- Commit message 和 Change log
 - [cross-env](https://github.com/kentcdodds/cross-env) --- 跨平台设置环境变量
 
 ## 导航
@@ -18,8 +20,9 @@
 $ yarn add docz --dev
 ```
 
-```markdown
 最好在package.json里面配置启动项的别名怕跟其它的有冲突（可选）
+
+```markdown
 {
   "scripts": {
       "docz:dev": "docz dev",
@@ -60,6 +63,12 @@ $ yarn docz dev
 ## Commitizen
 > 使用目的:统一commit格式，增加可阅读性，自动生成版本的 changelog
 
+- 生成 Change log
+```sh
+$ npm run changelog
+```
+
+- 安装 commitizen
 ```sh
 $ npm install -g commitizen
 $ npm install -g conventional-changelog --``不包含命令行工具
@@ -112,3 +121,4 @@ $ commitizen init cz-conventional-changelog --save --save-exact
 6. Commit package.json and CHANGELOG.md files
 7. Tag
 8. Push
+
