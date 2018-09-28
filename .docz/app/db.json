@@ -1,0 +1,57 @@
+{
+  "config": {
+    "title": "Ant Design Pro",
+    "description": "An out-of-box UI solution for enterprise applications",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "2.0.0",
+    "repository": null,
+    "native": false,
+    "plugins": [],
+    "htmlContext": {
+      "head": {
+        "links": [
+          {
+            "rel": "stylesheet",
+            "href": "https://cdn.bootcss.com/antd/3.5.4/antd.min.css"
+          }
+        ]
+      },
+      "body": {},
+      "footer": {
+        "scripts": [
+          {
+            "src": "https://cdn.bootcss.com/antd/3.5.4/antd-with-locales.min.js"
+          },
+          {
+            "src": "https://cdn.bootcss.com/antd/3.5.4/antd.min.js"
+          }
+        ]
+      }
+    }
+  },
+  "entries": {
+    "src/doc.mdx": {
+      "name": "Button",
+      "id": "5a16c1b345cb6ba9e00d63a62cb2a745",
+      "filepath": "src/doc.mdx",
+      "link": null,
+      "slug": "src-doc",
+      "route": "/src-doc",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        }
+      ]
+    }
+  }
+}

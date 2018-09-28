@@ -1,0 +1,21 @@
+---
+name: Button
+---
+
+import { Playground,PropsTable } from 'docz'
+import { Button, Icon } from 'antd'
+
+# Button
+
+<PropsTable of={Button} />
+
+## Basic usage
+
+<Playground>
+  <Button type="primary">Click me</Button>
+  <Button type="primary" icon="search">Search</Button>
+  <Button>Click me</Button>
+  <Button type="primary">
+    <Icon type="left" />Go back
+  </Button>
+</Playground>
