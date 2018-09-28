@@ -1,7 +1,8 @@
 # 小税种的组件开发 ![version.svg](https://img.shields.io/badge/version-v0.0.1-519dd9.svg)
 
 #### 需要开发的组件列表 Lists
-  + 异步表格
+  + 异步表格 （表格自适应 x,y 轴）
+  + 可编辑表格
   + form表单
   + 日期类型
       * 按月查询
