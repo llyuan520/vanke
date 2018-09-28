@@ -1,12 +1,8 @@
 /**
  * Created by liuliyuan on 2018/9/27.
  */
-import doczPluginNetlify from "docz-plugin-netlify";
 
 export default {
-  plugins: [
-    doczPluginNetlify('.docz/dist')
-  ],
   htmlContext: {
     head: {
       links: [{
