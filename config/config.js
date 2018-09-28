@@ -20,7 +20,8 @@ export default {
           baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
         },
         dynamicImport: {
-          loadingComponent: './components/PageLoading/index',
+          //loadingComponent: './components/PageLoading/index',
+          loadingComponent: './components/Loader/index',
         },
         polyfills: ['ie11'],
         ...(!process.env.TEST && os.platform() === 'darwin'
@@ -99,4 +100,5 @@ export default {
   cssnano: {
     mergeRules: false,
   },
+  hash:true, //TODO: 设置build之后文件的哈希值
 };
