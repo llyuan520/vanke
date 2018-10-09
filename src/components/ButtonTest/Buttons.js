@@ -65,15 +65,16 @@ export const Button = ({ children, ...props }) => (
 )
 
 Button.propTypes = {
+  /** 测试 撒的发斯蒂芬 */
   scales: t.oneOf(['small', 'normal', 'big']),
   kind: t.oneOf(['primary', 'secondary', 'cancel', 'dark', 'gray']),
-  outline: t.bool,
+  outline: t.bool.isRequired,
   size:t.string,
 }
 
 Button.defaultProps = {
   scales: 'normal',
   kind: 'primary',
-  outline: false,
+  //outline: false,
   size:'small',
 }
