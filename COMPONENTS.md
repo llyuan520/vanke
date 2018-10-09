@@ -18,5 +18,24 @@
       * 按搜索条件 input
   + modal（如：新增、编辑） --- 陈锋
   + 报表（内容区域带有操作：编辑，计算）
+  + 权限控制
   
+#### 公共函数 utils
+  + 正则 reg
+  + request
+  
+  
+#### 公共文档 --- 刘丽元
+  + docz
+  
+  ```bash
+  node replace-issues-url.js
+  ```
+  
+    
+#### git提交的记录和对应禅道bug的changelog文件维护(replace-issues-url.js) --- 刘丽元
+  + CHANGELOG.md
+  ```bash
+   npm run changelog
+  ```
   
