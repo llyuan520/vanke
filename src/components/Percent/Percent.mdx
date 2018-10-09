@@ -1,0 +1,50 @@
+---
+name: 百分比组件
+---
+
+import { Playground, PropsTable } from 'docz'
+import Percent from './index.js'
+
+# 百分比组件
+
+<PropsTable of={Percent} />
+
+## 基本展示
+
+默认不保留小数点，通过四舍五入取值
+
+<Playground>
+    <Percent value={0.8}/>
+    <br/>
+    <Percent value={0.008}/>
+</Playground>
+
+## 保留一位小数点值
+
+通过设置 decimal 属性，可以设置展示到小数位数
+
+<Playground>
+    <Percent value={0.8} decimal={2}/>
+    <br/>
+    <Percent value={0.008} decimal={4}/>
+</Playground>
+
+## 隐藏百分号
+
+通过设置属性 hideSymbol 为 true，可以设置隐藏百分号
+
+<Playground>
+    <Percent value={0.8} hideSymbol={true}/>
+    <br/>
+    <Percent value={0.008} hideSymbol={true}/>
+</Playground>
+
+## 可编辑状态
+
+通过设置 edit 为 true 可以实现点击可编辑状态
+
+<Playground>
+    <Percent value={0.8} edit={true} onValue={value=>alert(value)}/>
+    <br/>
+    <Percent value={0.008} edit={true} onValue={value=>alert(value)}/>
+</Playground>
