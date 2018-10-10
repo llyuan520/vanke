@@ -107,9 +107,9 @@ Percent.propTypes = {
   value: t.number.isRequired,
   /** 保留小数点 */
   decimal: t.number,
-  /** 数值参数 */
+  /** 隐藏百分号 */
   hideSymbol: t.bool,
-  /** 数值参数 */
+  /** 可编辑 */
   edit: t.bool,
   /** 获取数值回调 */
   onValue: t.func,
