@@ -14,9 +14,9 @@ import Percent from './index.js'
 默认展示2位小数，通过四舍五入取值
 
 <Playground>
-    <Percent value={100.11}/>
+    <Percent value={1000.11}/>
     <br/>
-    <Percent value={100.99}/>
+    <Percent value={2000.99}/>
 </Playground>
 
 ## 保留小数点值
@@ -24,11 +24,11 @@ import Percent from './index.js'
 通过设置 decimal 属性，可以设置展示到小数位数
 
 <Playground>
-    <Percent value={100.115} decimal={1}/>
+    <Percent value={1000.115} decimal={1}/>
     <br/>
-    <Percent value={100.9} decimal={3}/>
+    <Percent value={2000.9} decimal={3}/>
     <br/>
-    <Percent value={100.9} decimal={0}/>
+    <Percent value={3000.9} decimal={0}/>
 </Playground>
 
 ## 可编辑状态
