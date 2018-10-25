@@ -101,4 +101,6 @@ export default {
     mergeRules: false,
   },
   hash:true, //TODO: 设置build之后文件的哈希值
+  //disableCSSModules: true,  https://github.com/umijs/umi/issues/1143 css-modules 可以这么配置
+  //cssModulesWithAffix: true, https://github.com/umijs/umi/issues/1143 css-modules 可以这么配置
 };
