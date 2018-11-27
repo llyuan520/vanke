@@ -31,6 +31,7 @@ Numeric.propTypes = {
   wheelOn: PropTypes.oneOf(['focus', 'hover']),
   wheelStep: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['progressive'])]),
   style: PropTypes.object,
+  onChange: PropTypes.func,
 };
 
 Numeric.defaultProps = {
@@ -56,4 +57,5 @@ Numeric.defaultProps = {
   wheelOn: 'focus',
   wheelStep: 'progressive',
   style: null,
+  onChange: null,
 };
