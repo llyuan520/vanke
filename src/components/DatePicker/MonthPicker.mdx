@@ -1,0 +1,22 @@
+---
+name: MonthPicker
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import MonthPicker from './Month';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
+
+# MonthPicker(月份选择组件)
+
+## API
+
+<PropsTable of={MonthPicker} />
+
+## 月份选择
+
+<Playground>
+    <MonthPicker />
+</Playground>

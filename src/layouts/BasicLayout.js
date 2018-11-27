@@ -1,3 +1,4 @@
+/* eslint-disabled */
 import React from 'react';
 import { Layout } from 'antd';
 import DocumentTitle from 'react-document-title';
@@ -17,7 +18,10 @@ import Footer from './Footer';
 import Header from './Header';
 import Context from './MenuContext';
 import Exception403 from '../pages/Exception/403';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
 
+moment.locale('zh-cn');
 const { Content } = Layout;
 
 // Conversion router to menu.

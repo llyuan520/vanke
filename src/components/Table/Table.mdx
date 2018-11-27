@@ -1,0 +1,35 @@
+---
+name: Table
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import ComplexTable from './index'
+import { columns, dataSource } from './data'
+
+# Table(异步表格组件)
+
+## API
+
+<PropsTable of={ComplexTable} />
+
+## 有选项类型
+
+<Playground>
+    <ComplexTable
+        dataSource={dataSource}
+        columns={columns}
+        selectionType={'checkbox'}
+        isSelection={true}
+    />
+</Playground>
+
+## 无选项类型
+
+<Playground>
+    <ComplexTable
+        dataSource={dataSource}
+        columns={columns}
+        isSelection={false}
+    />
+</Playground>
