@@ -1,6 +1,5 @@
 /**
  * Created by liuliyuan on 2018/9/28.
- * eslint-disabled
  */
 import React from 'react';
 import styled from 'react-emotion';

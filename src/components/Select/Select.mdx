@@ -1,0 +1,54 @@
+---
+name: 异步输入选择器
+---
+
+import { Playground, PropsTable } from 'docz'
+import Select from './index.js'
+
+# 异步输入选择器
+
+<PropsTable of={Select} />
+
+## 异步搜索
+
+必传 url 属性，默认 response 格式为 ['title1', 'title2', ...]
+
+<Playground>
+     <Select value={1} style={{width: '200px'}} url='http://api.youga23.com/test/value?v={value}'/>
+</Playground>
+
+## 异步搜索指定属性名
+
+response 格式为 [{t: title1}, {t: 'title2'}, ...]
+则 name 设置为 't'
+
+<Playground>
+     <Select value={1} style={{width: '200px'}} url='http://api.youga23.com/test/pathDemo?v={value}' name={'t'}/>
+</Playground>
+
+## 异步搜索指定路径
+
+response 格式为 {
+    data: {
+        list: [{t: title1}, {t: 'title2'}, ...]
+    }
+}
+则 path 设置为 ['data', 'list']; name 设置为 't'
+
+<Playground>
+     <Select value={1} style={{width: '200px'}} url='http://api.youga23.com/test/list?v={value}' path={['data', 'list']} name={'text'}/>
+</Playground>
+
+## 异步搜索选中回调
+
+callback 属性可以传回调函数
+    第一个值为选中内容
+    第二个值为选中索引值
+
+<Playground>
+     <Select value={1} style={{width: '200px'}} url='http://api.youga23.com/test/value?v={value}' callback={(v, k)=>console.log(v, k)}/>
+</Playground>
+
+
+
+
